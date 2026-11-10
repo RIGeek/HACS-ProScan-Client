@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ProScan web server",
+        "description": "Connect to ProScan's built-in web server (the same address you open in a browser).",
+        "data": {
+          "url": "Server URL",
+          "stream_name": "Stream name",
+          "stream_password": "Stream password",
+          "monitor_password": "Monitor password",
+          "verify_ssl": "Verify SSL certificate"
+        },
+        "data_description": {
+          "url": "For example https://scanner.example.net or http://192.168.1.20:5000",
+          "stream_name": "The Stream Name set in ProScan's Web Server settings (the last part of the stream URL).",
+          "stream_password": "Only if ProScan's 'Serve Audio Stream' password is set.",
+          "monitor_password": "Only if ProScan's 'Serve Scanner Monitor Mode' password is set. Needed to see the display."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach a ProScan web server at that address.",
+      "invalid_auth": "ProScan rejected the password.",
+      "invalid_url": "Enter an http:// or https:// address.",
+      "unknown": "Unexpected error, see the log."
+    },
+    "abort": {
+      "already_configured": "This ProScan server is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ProScan options",
+        "data": {
+          "stream_name": "Stream name",
+          "stream_password": "Stream password",
+          "monitor_password": "Monitor password",
+          "idle_timeout": "Display idle timeout"
+        },
+        "data_description": {
+          "stream_password": "Leave blank to keep the current password.",
+          "monitor_password": "Leave blank to keep the current password.",
+          "idle_timeout": "How long the display connection stays open after the last view of the camera."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the ProScan web server.",
+      "invalid_auth": "ProScan rejected the password."
+    }
+  },
+  "entity": {
+    "camera": {
+      "display": {
+        "name": "Display"
+      }
+    }
+  }
+}
