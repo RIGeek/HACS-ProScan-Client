@@ -111,7 +111,8 @@ class ProScanServer:
         """MP3 stream URL, with the stream password appended if one is set."""
         url = f"{self.base_url}/{quote(self.stream_name)}"
         if self._stream_password:
-            url += "+" + quote(self._stream_password, safe="")
+            # ProScan uses "+" for spaces in the stream password.
+            url += "+" + quote(self._stream_password.replace(" ", "+"), safe="+")
         return url
 
     @property
