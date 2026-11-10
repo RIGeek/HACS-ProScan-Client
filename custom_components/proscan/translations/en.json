@@ -12,7 +12,7 @@
           "verify_ssl": "Verify SSL certificate"
         },
         "data_description": {
-          "url": "For example https://scanner.example.net or http://192.168.1.20:5000",
+          "url": "For example {example_url}",
           "stream_name": "The Stream Name set in ProScan's Web Server settings (the last part of the stream URL).",
           "stream_password": "Only if ProScan's 'Serve Audio Stream' password is set.",
           "monitor_password": "Only if ProScan's 'Serve Scanner Monitor Mode' password is set. Needed to see the display."
@@ -22,7 +22,7 @@
     "error": {
       "cannot_connect": "Could not reach a ProScan web server at that address.",
       "invalid_auth": "ProScan rejected the password.",
-      "invalid_url": "Enter an http:// or https:// address.",
+      "invalid_url": "Enter an address that starts with http or https.",
       "unknown": "Unexpected error, see the log."
     },
     "abort": {

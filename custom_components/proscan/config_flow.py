@@ -106,6 +106,9 @@ class ProScanConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id="user",
             data_schema=_user_schema(user_input or {}),
             errors=errors,
+            description_placeholders={
+                "example_url": "https://scanner.example.net or http://192.168.1.20:5000"
+            },
         )
 
     @staticmethod
